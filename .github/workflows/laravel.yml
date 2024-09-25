@@ -36,6 +36,11 @@ jobs:
 
             - name: Grant permission to PHPUnit
               run: chmod +x ./vendor/bin/phpunit
-              
+
             - name: Run test
+              id: test  
               run:  ./vendor/bin/phpunit 
+
+            - name: deploy
+              if: steps.test.outcome == 'success'
+              run: ls 
