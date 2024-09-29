@@ -22,4 +22,4 @@ jobs:
       - name: Run script
         run: |
           echo "PHP VERSION ${{ matrix.php-version }}"
-          php -v 
+          php -v
